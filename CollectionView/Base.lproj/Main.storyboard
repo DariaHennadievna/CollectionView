@@ -18,7 +18,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x9N-wz-Wmy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <collectionViewLayout key="collectionViewLayout" id="OgJ-aa-X5i" customClass="CHTCollectionViewWaterfallLayout"/>
+                                <collectionViewLayout key="collectionViewLayout" id="OgJ-aa-X5i" customClass="CollectionViewLayout"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WaterfallCell" id="p3w-W4-hrp" customClass="CollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>

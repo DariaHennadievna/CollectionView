@@ -14,14 +14,10 @@
 		84B3D8E01B53CEDC00629E97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3D8DF1B53CEDC00629E97 /* Images.xcassets */; };
 		84B3D8E31B53CEDC00629E97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B3D8E11B53CEDC00629E97 /* LaunchScreen.xib */; };
 		84B3D8EF1B53CEDD00629E97 /* CollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3D8EE1B53CEDD00629E97 /* CollectionViewTests.m */; };
-		84B3D8FC1B53CF9500629E97 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3D8FB1B53CF9500629E97 /* CHTCollectionViewWaterfallLayout.m */; };
 		84B3D9001B53D3F300629E97 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3D8FF1B53D3F300629E97 /* CollectionViewCell.m */; };
-		84B3D9061B53D6EA00629E97 /* cat1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B3D9021B53D6EA00629E97 /* cat1.jpg */; };
-		84B3D9071B53D6EA00629E97 /* cat2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B3D9031B53D6EA00629E97 /* cat2.jpg */; };
-		84B3D9081B53D6EA00629E97 /* cat3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B3D9041B53D6EA00629E97 /* cat3.jpg */; };
-		84B3D9091B53D6EA00629E97 /* cat4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B3D9051B53D6EA00629E97 /* cat4.jpg */; };
 		84B3D90C1B53E9CB00629E97 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B3D90B1B53E9CB00629E97 /* data.json */; };
 		84B3D90F1B53EAC800629E97 /* ManagerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3D90E1B53EAC800629E97 /* ManagerData.m */; };
+		84B3D9441B541E7100629E97 /* CollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3D9431B541E7100629E97 /* CollectionViewLayout.m */; };
 		F508EEFF4BD08169044CA6C7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 693EBB8538A9568E628628FE /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,17 +47,13 @@
 		84B3D8E81B53CEDD00629E97 /* CollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3D8ED1B53CEDD00629E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B3D8EE1B53CEDD00629E97 /* CollectionViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewTests.m; sourceTree = "<group>"; };
-		84B3D8FA1B53CF9500629E97 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHTCollectionViewWaterfallLayout.h; path = CustomLayout/CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
-		84B3D8FB1B53CF9500629E97 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHTCollectionViewWaterfallLayout.m; path = CustomLayout/CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		84B3D8FE1B53D3F300629E97 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewCell.h; path = Views/CollectionViewCell.h; sourceTree = "<group>"; };
 		84B3D8FF1B53D3F300629E97 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewCell.m; path = Views/CollectionViewCell.m; sourceTree = "<group>"; };
-		84B3D9021B53D6EA00629E97 /* cat1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat1.jpg; path = images/cat1.jpg; sourceTree = "<group>"; };
-		84B3D9031B53D6EA00629E97 /* cat2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat2.jpg; path = images/cat2.jpg; sourceTree = "<group>"; };
-		84B3D9041B53D6EA00629E97 /* cat3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat3.jpg; path = images/cat3.jpg; sourceTree = "<group>"; };
-		84B3D9051B53D6EA00629E97 /* cat4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat4.jpg; path = images/cat4.jpg; sourceTree = "<group>"; };
 		84B3D90B1B53E9CB00629E97 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = Resources/data.json; sourceTree = "<group>"; };
 		84B3D90D1B53EAC800629E97 /* ManagerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManagerData.h; path = Resources/ManagerData.h; sourceTree = "<group>"; };
 		84B3D90E1B53EAC800629E97 /* ManagerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagerData.m; path = Resources/ManagerData.m; sourceTree = "<group>"; };
+		84B3D9421B541E7100629E97 /* CollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewLayout.h; sourceTree = "<group>"; };
+		84B3D9431B541E7100629E97 /* CollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLayout.m; sourceTree = "<group>"; };
 		91D1B1240DD89A3064335226 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +122,6 @@
 		84B3D8D21B53CEDC00629E97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84B3D9011B53D6D600629E97 /* SourceImages */,
 				84B3D8DF1B53CEDC00629E97 /* Images.xcassets */,
 				84B3D8E11B53CEDC00629E97 /* LaunchScreen.xib */,
 				84B3D8D31B53CEDC00629E97 /* Info.plist */,
@@ -168,8 +159,8 @@
 		84B3D8F91B53CF7D00629E97 /* CustomLayout */ = {
 			isa = PBXGroup;
 			children = (
-				84B3D8FA1B53CF9500629E97 /* CHTCollectionViewWaterfallLayout.h */,
-				84B3D8FB1B53CF9500629E97 /* CHTCollectionViewWaterfallLayout.m */,
+				84B3D9421B541E7100629E97 /* CollectionViewLayout.h */,
+				84B3D9431B541E7100629E97 /* CollectionViewLayout.m */,
 			);
 			name = CustomLayout;
 			sourceTree = "<group>";
@@ -181,17 +172,6 @@
 				84B3D8FF1B53D3F300629E97 /* CollectionViewCell.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		84B3D9011B53D6D600629E97 /* SourceImages */ = {
-			isa = PBXGroup;
-			children = (
-				84B3D9021B53D6EA00629E97 /* cat1.jpg */,
-				84B3D9031B53D6EA00629E97 /* cat2.jpg */,
-				84B3D9041B53D6EA00629E97 /* cat3.jpg */,
-				84B3D9051B53D6EA00629E97 /* cat4.jpg */,
-			);
-			name = SourceImages;
 			sourceTree = "<group>";
 		};
 		84B3D90A1B53E9AF00629E97 /* Resources */ = {
@@ -295,13 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B3D9061B53D6EA00629E97 /* cat1.jpg in Resources */,
-				84B3D9091B53D6EA00629E97 /* cat4.jpg in Resources */,
-				84B3D9071B53D6EA00629E97 /* cat2.jpg in Resources */,
 				84B3D90C1B53E9CB00629E97 /* data.json in Resources */,
 				84B3D8DE1B53CEDC00629E97 /* Main.storyboard in Resources */,
 				84B3D8E31B53CEDC00629E97 /* LaunchScreen.xib in Resources */,
-				84B3D9081B53D6EA00629E97 /* cat3.jpg in Resources */,
 				84B3D8E01B53CEDC00629E97 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,11 +330,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3D8DB1B53CEDC00629E97 /* ViewController.m in Sources */,
+				84B3D9441B541E7100629E97 /* CollectionViewLayout.m in Sources */,
 				84B3D90F1B53EAC800629E97 /* ManagerData.m in Sources */,
 				84B3D9001B53D3F300629E97 /* CollectionViewCell.m in Sources */,
 				84B3D8D81B53CEDC00629E97 /* AppDelegate.m in Sources */,
 				84B3D8D51B53CEDC00629E97 /* main.m in Sources */,
-				84B3D8FC1B53CF9500629E97 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

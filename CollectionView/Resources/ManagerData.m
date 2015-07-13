@@ -12,17 +12,14 @@
 
 -(id)initWithDictionary:(NSDictionary *)aDict{
     self = [self init];
-    if (self){
+    if (self)
+    {
+        // для своей задачи я не использую title для картинок
+        // по этому и сохранять его не буду.
+        // для каждого объекта из .json буду сохранять только адрес картинки
         self.imageFilename = [aDict objectForKey:@"imageFilename"];
-        self.title = [aDict objectForKey:@"title"];
-        self.firstTimeShown = YES;
     }
     return self;
-}
-
--(NSString *)description{
-    NSString *retVal = [NSString stringWithFormat:@"%@ %@", [super description], self.title];
-    return retVal;
 }
 
 @end

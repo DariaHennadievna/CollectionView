@@ -7,16 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHTCollectionViewWaterfallLayout.h"
+#import "CollectionViewLayout.h"
 #import "CollectionViewCell.h"
-//#import <AFNetworking/AFNetworking.h>
-//#import <AFNetworking/AFNetworking.h>
-#import <AFNetworking/AFHTTPRequestOperation.h>
-
+#import "ManagerData.h"
 #import <UIImageView+AFNetworking.h>
-//#import <UII>
 
-@interface ViewController : UIViewController <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
+@interface ViewController : UIViewController <UICollectionViewDataSource, CollectionViewDelegateLayout>
 
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 
