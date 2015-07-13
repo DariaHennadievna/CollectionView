@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CHTCollectionViewWaterfallLayout.h"
+#import "CollectionViewCell.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
 
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 
 @end
 
