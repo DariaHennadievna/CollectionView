@@ -178,9 +178,9 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
 #pragma mark - Init
 - (void)commonInit {
   _columnCount = 2;
-  _minimumColumnSpacing = 10;
-  _minimumInteritemSpacing = 10;
-  _headerHeight = 0;
+  _minimumColumnSpacing = 5;
+  _minimumInteritemSpacing = 5;
+  _headerHeight = 20;
   _footerHeight = 0;
   _sectionInset = UIEdgeInsetsZero;
   _headerInset  = UIEdgeInsetsZero;
@@ -316,7 +316,8 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
       CGFloat itemHeight = 0;
       if (itemSize.height > 0 && itemSize.width > 0) {
         itemHeight = CHTFloorCGFloat(itemSize.height * itemWidth / itemSize.width);
-      }
+      }        
+   
 
       attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
       attributes.frame = CGRectMake(xOffset, yOffset, itemWidth, itemHeight);
@@ -382,6 +383,7 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
 
     [self.unionRects addObject:[NSValue valueWithCGRect:unionRect]];
   }
+    
 }
 
 - (CGSize)collectionViewContentSize {

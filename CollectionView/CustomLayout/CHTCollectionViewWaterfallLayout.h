@@ -205,6 +205,9 @@ extern NSString *const CHTCollectionElementKindSectionFooter;
  */
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumColumnSpacingForSectionAtIndex:(NSInteger)section;
 
+
+-(float)collectionView:(UICollectionView *)collectionView relativeHeightForItemAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 #pragma mark - CHTCollectionViewWaterfallLayout
