@@ -76,19 +76,26 @@
 
 #pragma mark - Life Cycle
 
-- (void)dealloc {
+- (void)dealloc
+{
+    // необходимые меры перед deallocation
     _collectionView.delegate = nil;
     _collectionView.dataSource = nil;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
+    // определяем какая ориентация девайса
+    // определяемся с количеством колонок
     [self updateLayoutForOrientation:[UIApplication sharedApplication].statusBarOrientation];
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
+    // если менется ориентация
     [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    // также определяемся с количеством колонок
     [self updateLayoutForOrientation:toInterfaceOrientation];
 }
 
@@ -138,9 +145,9 @@
          weakCell.imageView.image = image;
     }
     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error)
-     {
+    {
          NSLog(@"Err: %@", [error localizedDescription]);
-     }];
+    }];
     
     return cell;
 }
@@ -148,7 +155,7 @@
 #pragma mark - CollectionViewDelegateLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+{    
     return [self.cellSizes[indexPath.item] CGSizeValue];
 }
 

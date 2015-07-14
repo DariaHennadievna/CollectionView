@@ -91,29 +91,37 @@ static CGFloat FloorCGFloat(CGFloat value)
 }
 
 #pragma mark - Private Accessors
-- (NSMutableDictionary *)headersAttribute {
-    if (!_headersAttribute) {
+- (NSMutableDictionary *)headersAttribute
+{
+    if (!_headersAttribute)
+    {
         _headersAttribute = [NSMutableDictionary dictionary];
     }
     return _headersAttribute;
 }
 
-- (NSMutableDictionary *)footersAttribute {
-    if (!_footersAttribute) {
+- (NSMutableDictionary *)footersAttribute
+{
+    if (!_footersAttribute)
+    {
         _footersAttribute = [NSMutableDictionary dictionary];
     }
     return _footersAttribute;
 }
 
-- (NSMutableArray *)unionRects {
-    if (!_unionRects) {
+- (NSMutableArray *)unionRects
+{
+    if (!_unionRects)
+    {
         _unionRects = [NSMutableArray array];
     }
     return _unionRects;
 }
 
-- (NSMutableArray *)columnHeights {
-    if (!_columnHeights) {
+- (NSMutableArray *)columnHeights
+{
+    if (!_columnHeights)
+    {
         _columnHeights = [NSMutableArray array];
     }
     return _columnHeights;
@@ -126,14 +134,17 @@ static CGFloat FloorCGFloat(CGFloat value)
     return _allItemAttributes;
 }
 
-- (NSMutableArray *)sectionItemAttributes {
-    if (!_sectionItemAttributes) {
+- (NSMutableArray *)sectionItemAttributes
+{
+    if (!_sectionItemAttributes)
+    {
         _sectionItemAttributes = [NSMutableArray array];
     }
     return _sectionItemAttributes;
 }
 
-- (id <CollectionViewDelegateLayout> )delegate {
+- (id <CollectionViewDelegateLayout> )delegate
+{
     return (id <CollectionViewDelegateLayout> )self.collectionView.delegate;
 }
 
@@ -153,15 +164,19 @@ static CGFloat FloorCGFloat(CGFloat value)
     _itemRenderDirection = CollectionViewLayoutItemRenderDirectionShortestFirst;
 }
 
-- (id)init {
-    if (self = [super init]) {
+- (id)init
+{
+    if (self = [super init])
+    {
         [self commonInit];
     }
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder])
+    {
         [self commonInit];
     }
     return self;
@@ -169,7 +184,8 @@ static CGFloat FloorCGFloat(CGFloat value)
 
 #pragma mark - CollectionViewLayout Methods to Override
 
-- (void)prepareLayout {
+- (void)prepareLayout
+{
     [super prepareLayout];
     
     // очищаем массивы
@@ -204,8 +220,7 @@ static CGFloat FloorCGFloat(CGFloat value)
         // изначально высота колонок = 0
         // двумерный массив self.columnHeights[section][columnIndex]...
         [self.columnHeights addObject:sectionColumnHeights];
-    }
-    
+    }    
     
     
     // создаем атрибуты
@@ -462,17 +477,18 @@ static CGFloat FloorCGFloat(CGFloat value)
 
 
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)path
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (path.section >= [self.sectionItemAttributes count])
+    if (indexPath.section >= [self.sectionItemAttributes count])
     {
         return nil;
     }
-    if (path.item >= [self.sectionItemAttributes[path.section] count])
+    if (indexPath.item >= [self.sectionItemAttributes[indexPath.section] count])
     {
         return nil;
     }
-    return (self.sectionItemAttributes[path.section])[path.item];
+    // возвращаем атрибуты для каждого эдемента каждой секции и правильно размещаем их
+    return (self.sectionItemAttributes[indexPath.section])[indexPath.item];
 }
 
 
@@ -484,7 +500,7 @@ static CGFloat FloorCGFloat(CGFloat value)
     NSInteger end = self.unionRects.count;
     NSMutableArray *attrs = [NSMutableArray array];
     
-    // просматриваем фреймы для каждого элемента, если они пересекаются с данной областью (rect), — добавляем в массив attrs и возвращаем
+    // просматриваем фреймы для каждого элемента, если они пересекаются с данной областью (rect), добавляем их в массив attrs и возвращаем его
     
     for (i = 0; i < self.unionRects.count; i++)
     {
@@ -527,10 +543,7 @@ static CGFloat FloorCGFloat(CGFloat value)
 }
 
 
-
 // метод возвращает атрибуты для дополнительных view (header, footer)
-// я не использую этот метод,  так как у меня нет header, footer
-// и я не прдполагаю, что мне понадобятся header, footer
 - (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewLayoutAttributes *attribute = nil;

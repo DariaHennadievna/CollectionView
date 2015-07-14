@@ -11,8 +11,8 @@
 // порядок размещения элементов
 typedef NS_ENUM (NSUInteger, CollectionViewLayoutItemRenderDirection)
 {
-    // каждый следующий эдемент устанавливается в ту колонку, которая имеею наименьшую высоту
-    // по умолчанию
+    // каждый следующий эдемент устанавливается в ту колонку, которая имеет наименьшую высоту
+    // значение по умолчанию
     CollectionViewLayoutItemRenderDirectionShortestFirst,
     // заполнение идет слева на право
     CollectionViewLayoutItemRenderDirectionLeftToRight,
@@ -21,10 +21,9 @@ typedef NS_ENUM (NSUInteger, CollectionViewLayoutItemRenderDirection)
 };
 
 
-
-/// идентификатор для дополнительное view Header
+/// идентификатор для дополнительного view Header
 extern NSString *const CollectionElementKindSectionHeader;
-/// идентификатор для дополнительное view Footer
+/// идентификатор для дополнительного view Footer
 extern NSString *const CollectionElementKindSectionFooter;
 
 #pragma mark - CollectionViewDelegateLayout
@@ -88,11 +87,9 @@ extern NSString *const CollectionElementKindSectionFooter;
 // по умолчанию = 2
 @property (nonatomic, assign) NSInteger columnCount;
 
-
 // минимальное пространство между колонками
 // по умолчанию = 5
 @property (nonatomic, assign) CGFloat minimumColumnSpacing;
-
 
 // минимальное пространство между элементами в колонке
 // по умолчанию = 5
@@ -117,7 +114,6 @@ extern NSString *const CollectionElementKindSectionFooter;
 // отступы для указанной секции
 // по умолчанию: (Top = 20, Left, Right, Bottom = 0)
 @property (nonatomic, assign) UIEdgeInsets sectionInset;
-
 
 // свойство определяет как будут располагаться элементы
 // по умолчанию каждый следующий элемент будет размещаться в той колонке, которая имеет наименьшую высоту
